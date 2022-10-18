@@ -7,6 +7,8 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+require(tidyverse)
+require(tigerstats)
 ```
 
 ## make a simple regression model
@@ -22,7 +24,7 @@ plot(WEIGHT~SEX,data=bears)
 plot(LENGTH~SEX, data=bears)
 ```
 
-We can see that, from these plots, that the sex value of 1 corresponds to male bears, and the sex value of 2 corresponds to male bears.
+We can see that, from these plots, that the sex value of 1 corresponds to male bears, and the sex value of 2 corresponds to female bears.
 
 ## Model LENGTH ~ NECK  this is an example  
 
@@ -76,3 +78,30 @@ summary(LMAGE)
 4. WEIGHT  
 5. HEADWTH  
 6. AGE  
+```{R}
+mbears <-  filter(bears, SEX==1)
+```
+```{r}
+LMHEADLEN <- lm(LENGTH ~ HEADLEN, data=mbears)
+summary(LMHEADLEN)
+```
+```{r}
+LMCHEST <- lm(LENGTH ~ CHEST, data=mbears)
+summary(LMCHEST)
+```
+```{R}
+LMNECK <- lm(LENGTH ~ NECK, data=mbears)
+summary(LMNECK)
+```
+```{r}
+LMWEIGHT <- lm(LENGTH ~ WEIGHT, data=mbears)
+summary(LMWEIGHT)
+```
+```{r}
+LMHEADWTH <- lm(LENGTH ~ HEADWTH, data=mbears)
+summary(LMHEADWTH)
+```
+```{r}
+LMAGE <- lm(LENGTH ~ AGE, data=mbears)
+summary(LMAGE)
+```
