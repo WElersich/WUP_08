@@ -34,12 +34,14 @@ summary.lm(simp)
 ```
 It would appear that neck circumference is positively correlated with body length in bears.
 ## now predict the length of a bear who has a neck of 17, 22 and 26
-
+By looking at plot, we can predict a bear with a neck of 17 having a length of 50, a bear with a neck of 22 having a length of 60, and a bear with a neck of 26 having a length of 70. But a computer can predict better than a human can.
 
 ```{r}
 new <- data.frame(NECK=c(17,22,26))
 predict(simp,new)
 predict(simp,new,se.fit=TRUE)
 ```
+
+
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
 
