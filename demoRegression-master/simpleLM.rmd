@@ -115,3 +115,5 @@ summary(LMAGE)
 4. WEIGHT  
 5. HEADWTH  
 6. AGE  
+
+There is a difference between the results expected for male bears, and bears in general.
