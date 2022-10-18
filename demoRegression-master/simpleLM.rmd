@@ -17,6 +17,12 @@ bears <- read.csv(file="BEARS.csv",header = TRUE)
 bears$SEX<- as.factor(bears$SEX)
 bears$MONTH<- as.factor(bears$MONTH)
 ```
+```{r}
+plot(WEIGHT~SEX,data=bears)
+plot(LENGTH~SEX, data=bears)
+```
+
+We can see that, from these plots, that the sex value of 1 corresponds to male bears, and the sex value of 2 corresponds to male bears.
 
 ## Model LENGTH ~ NECK  this is an example  
 
