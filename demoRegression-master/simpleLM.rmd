@@ -32,7 +32,7 @@ plot(LENGTH~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
+It would appear that neck circumference is positively correlated with body length in bears.
 ## now predict the length of a bear who has a neck of 17, 22 and 26
 
 
