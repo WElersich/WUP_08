@@ -78,8 +78,14 @@ summary(LMAGE)
 4. WEIGHT  
 5. HEADWTH  
 6. AGE  
+
+### For male bears:
 ```{R}
 mbears <-  filter(bears, SEX==1)
+```
+```{R}
+LMNECK <- lm(LENGTH ~ NECK, data=mbears)
+summary(LMNECK)
 ```
 ```{r}
 LMHEADLEN <- lm(LENGTH ~ HEADLEN, data=mbears)
@@ -88,10 +94,6 @@ summary(LMHEADLEN)
 ```{r}
 LMCHEST <- lm(LENGTH ~ CHEST, data=mbears)
 summary(LMCHEST)
-```
-```{R}
-LMNECK <- lm(LENGTH ~ NECK, data=mbears)
-summary(LMNECK)
 ```
 ```{r}
 LMWEIGHT <- lm(LENGTH ~ WEIGHT, data=mbears)
@@ -105,3 +107,11 @@ summary(LMHEADWTH)
 LMAGE <- lm(LENGTH ~ AGE, data=mbears)
 summary(LMAGE)
 ```
+
+(IN DESCENDING ORDER OF PERFORMANCE)  
+1. NECK  
+2. HEADLEN  
+3. CHEST  
+4. WEIGHT  
+5. HEADWTH  
+6. AGE  
